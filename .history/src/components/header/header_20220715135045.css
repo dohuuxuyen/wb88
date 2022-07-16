@@ -1,0 +1,130 @@
+.container {
+    width: 100vw;
+    background-color: #F7FAF9;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 80px;
+}
+
+.header-logo {
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+
+.header-item {
+    list-style: none;
+    padding: 10px;
+}
+
+.header-item_link{
+    text-decoration: none;
+    color: rgb(114, 111, 111);
+}
+
+.header-item_link.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+}
+
+.header-info_login,
+.header-info_register,
+.header-info_cart {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-left: 10px;
+    border: 1px solid #000;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.header-info_login:hover,
+.header-info_register:hover,
+.header-info_cart:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.header-info_login p,
+.header-info_register p,
+.header-info_cart p{
+    margin-left: 8px;
+}
+
+.mobile-header_menu {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .header {
+        margin: 3vh 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-header_menu {
+        display: block;
+    }
+
+    .mobile-menu_icon {
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .header-list {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 10vh; */
+        justify-content: center;
+        height: 100%;
+        width: 200px;
+        background-color: #F7FAF9;
+
+
+    }
+
+    .header-item {
+
+    }
+    .header-info {
+        font-size: 14px;
+        margin-left: 120px;
+    }
+
+    .header-info_login {
+        display: none;
+    }
+
+    .header-info_register {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.contact {
+    /* margin-top: 14vh;
+    margin-bottom: 74vh;
+    margin-left: 80px; */
+    margin: 14vh 80px 0;
+    flex: 1;
+}
+
+.contact-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-desc {
+    font-size: 16px;
+}
+
+@media (max-width: 739px) {
+    .contact {
+        
+    }
+}

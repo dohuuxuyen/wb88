@@ -1,0 +1,132 @@
+.products{
+    padding: 40px;
+    margin: 40px;
+    margin-top: 10vh;
+}
+
+.products-title {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.products-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.products-item {
+    margin: 0px 10px;
+    width: 130px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-item:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.card, .loading-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 40px 40px;
+    margin: 0 40px;
+    gap: 10px;
+}
+
+.loading-list {
+    margin-top: 80px;
+    margin-left: -40px;
+}
+
+.loading-item {
+    height: 406px;
+    width: 289px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #F7FAF9;
+}
+
+.loading {
+    height: 406px;
+    animation: anime 2s linear infinite;
+    font-size: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@keyframes anime {
+    0% {
+       opacity: 1;
+    }  100%{
+       opacity: 0;
+    }
+}
+
+.card-item {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #F7FAF9;
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    padding: 20px 40px;
+}
+
+.card-title {
+    text-align: center;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.card-button {
+    padding: 10px 0;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.card-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.card-price {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* mobile */
+
+@media (max-width: 739px) {
+    .products-list {
+        flex-wrap: wrap;
+        margin-bottom: 30px !important;
+    }
+
+    .products-item {
+        margin-bottom: 10px;
+    }
+}

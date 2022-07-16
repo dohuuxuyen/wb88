@@ -1,0 +1,55 @@
+.about {
+    margin-top: 10vh;
+    margin-bottom: 40vh;
+    height: 90vh;
+    width: 98.7vw;
+}
+
+.about-wrapper {
+    margin: 100px 80px;
+    text-align: justify;
+}
+
+.about-main {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-introduce {
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
+
+.distance {
+    border-top: 1px solid #ccc;
+}
+
+.about-title {
+    margin: 20px 0;
+}
+
+.about-img {
+    width: 80%;
+    height: 80%;
+    margin: 20px 0;
+}
+
+.about-title1 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 739px) {
+    .about-wrapper {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        overflow: hidden;
+    }
+    .about {
+        margin-bottom: -20vh !important;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+}

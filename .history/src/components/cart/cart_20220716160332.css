@@ -1,0 +1,156 @@
+.cart-block {
+    margin-top: 12vh;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+table,th,td {
+    border: 1px solid;
+    text-align: center;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 5px 0;
+}
+
+.cart-btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.cart-btn_remove {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-qty {
+    margin: 0 5px;
+}
+
+.cart-empty {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.cart-total {
+    width: 300px;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #F7FAF9;
+    position: fixed;
+    top: 14vh;
+    right: 14px;
+    /* z-index: -2; */
+}
+
+.total {
+    font-size: 24px;
+    color: red;
+}
+
+.check-out {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #fff;
+    color: #000;
+}
+
+.check-out:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.cart-mobile_wrapper {
+    display: none;
+}
+
+@media (max-width: 739px) {
+    .cart-empty {
+        font-size: 40px;
+    }
+
+    table,td,th {
+        /* display: none; */
+        border: none;
+    }
+
+    th {
+        display: none;
+    }
+
+    .cart-index, .cart-price {
+        display: none;
+    }
+
+    .cart-remove {
+        position: absolute;
+        top: 50%;
+        right: -80px;
+    }
+
+    .cart-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cart-qty {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cart-block {
+        margin-right: 20px;
+    }
+
+    .cart-total {
+        top: 636px;
+        width: 100%;
+        right: 0;
+        height: 100px;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .total {
+        font-size: 20px;
+        margin-top: -10px;
+    }
+
+    .check-out {
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+}

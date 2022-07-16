@@ -1,0 +1,11 @@
+.contact {
+    margin-top: 14vh;
+    margin-bottom: 74vh;
+    margin-left: 80px;
+}
+
+@media (max-width: 739px) {
+    .contact {
+        margin-bottom: 60vh;
+    }
+}

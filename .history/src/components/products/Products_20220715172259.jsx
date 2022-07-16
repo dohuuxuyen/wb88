@@ -1,0 +1,110 @@
+import React from "react";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import "./products.css";
+
+const Products = () => {
+  const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    let componentMounted = true;
+    const getProducts = async () => {
+      setLoading(true);
+      const response = await fetch("https://fakestoreapi.com/products");
+      if (componentMounted) {
+        setData(await response.clone().json());
+        setFilter(await response.json());
+        setLoading(false);
+      }
+      return () => {
+        componentMounted = false;
+      };
+    };
+    getProducts();
+  }, []);
+
+  const Loading = () => {
+    return (
+      <>
+        <div className="loading-list">
+          <div className="loading-item">
+            <div className="loading">...Đang tải</div>
+          </div>
+          <div className="loading-item">
+            <div className="loading">...Đang tải</div>
+          </div>
+          <div className="loading-item">
+            <div className="loading">...Đang tải</div>
+          </div>
+          <div className="loading-item">
+            <div className="loading">...Đang tải</div>
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  const FilterProduct = (e) => {
+    const updateListFilter = data.filter((x) => x.category === e);
+    setFilter(updateListFilter);
+  };
+
+  const ShowProducts = () => {
+    return (
+      <div className="products-list">
+        <div onClick={() => setFilter(data)} className="products-item">
+          Tất Cả
+        </div>
+        <div
+          onClick={() => FilterProduct("men's clothing")}
+          className="products-item"
+        >
+          Quần Áo Nam
+        </div>
+        <div
+          onClick={() => FilterProduct("women's clothing")}
+          className="products-item"
+        >
+          Quần Áo Nữ
+        </div>
+        <div
+          onClick={() => FilterProduct("jewelery")}
+          className="products-item"
+        >
+          Trang Sức
+        </div>
+        <div
+          onClick={() => FilterProduct("electronics")}
+          className="products-item"
+        >
+          Điện Tử
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <div className="products">
+        <h1 className="products-title">Sản Phẩm Mới Nhất</h1>
+        <ShowProducts />
+        <div className="products-menu">{loading ? <Loading /> : ""}</div>
+      </div>
+      <div className="card">
+        {filter.map((product, index) => (
+          <div key={index} className="card-item">
+            <img className="card-img" src={product.image} alt="" />
+            <div className="card-title">{product.title}</div>
+            <div className="card-price">${product.price}</div>
+            <NavLink to={`/products/${product.id}`} className="card-button">
+              Mua Ngay
+            </NavLink>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Products;
