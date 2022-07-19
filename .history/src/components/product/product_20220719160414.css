@@ -59,7 +59,7 @@
     background-color: #fff;
     color: #000;
     font-size: 15px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 
@@ -91,10 +91,7 @@
 }
 
 @media (max-width: 739px) {
-    .product-btn_mobile {
-        margin-right: 0;
-        height: 50px;
-    }
+
     .mb-10 {
         margin-bottom: 10px;
     }

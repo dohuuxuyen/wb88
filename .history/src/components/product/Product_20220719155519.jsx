@@ -43,11 +43,11 @@ const Product = () => {
           <div className="product-button">
             <button
               onClick={() => handleAddProduct(product)}
-              className="product-btn mb-10"
+              className="product-btn"
             >
               Thêm vào giỏ hàng
             </button>
-            <button className="product-btn product-btn_mobile">
+            <button className="product-btn">
               <NavLink className="btn" to="/products">
                 Sản phẩm khác
               </NavLink>

@@ -91,9 +91,11 @@
 }
 
 @media (max-width: 739px) {
-    .product-btn_mobile {
+    .mr-20 {
+        /* padding: 0 !important;
         margin-right: 0;
-        height: 50px;
+        margin: -10px; */
+        padding: 5px !important;
     }
     .mb-10 {
         margin-bottom: 10px;

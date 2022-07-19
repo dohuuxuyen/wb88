@@ -73,7 +73,7 @@
     text-decoration: none;
     color: #000;
     padding: 15px;
-    margin: -15px;
+    /* margin: -15px; */
 }
 
 .loading1 {
@@ -91,10 +91,7 @@
 }
 
 @media (max-width: 739px) {
-    .product-btn_mobile {
-        margin-right: 0;
-        height: 50px;
-    }
+
     .mb-10 {
         margin-bottom: 10px;
     }

@@ -47,7 +47,7 @@
 
 .product-button {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -91,10 +91,7 @@
 }
 
 @media (max-width: 739px) {
-    .product-btn_mobile {
-        margin-right: 0;
-        height: 50px;
-    }
+
     .mb-10 {
         margin-bottom: 10px;
     }

@@ -45,12 +45,6 @@
     margin-bottom: 24px;
 }
 
-.product-button {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .product-btn {
     padding: 15px;
     border-radius: 5px;
@@ -91,12 +85,10 @@
 }
 
 @media (max-width: 739px) {
-    .product-btn_mobile {
-        margin-right: 0;
-        height: 50px;
-    }
+
     .mb-10 {
         margin-bottom: 10px;
+        margin: 0pxauto;
     }
     .product {
         grid-template-columns: repeat(1, 1fr);

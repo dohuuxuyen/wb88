@@ -52,7 +52,7 @@
 }
 
 .product-btn {
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 5px;
     border: 1px solid #000;
     cursor: pointer;
@@ -91,10 +91,7 @@
 }
 
 @media (max-width: 739px) {
-    .product-btn_mobile {
-        margin-right: 0;
-        height: 50px;
-    }
+
     .mb-10 {
         margin-bottom: 10px;
     }

@@ -47,7 +47,7 @@ const Product = () => {
             >
               Thêm vào giỏ hàng
             </button>
-            <button className="product-btn product-btn_mobile">
+            <button className="product-btn mr-20">
               <NavLink className="btn" to="/products">
                 Sản phẩm khác
               </NavLink>
